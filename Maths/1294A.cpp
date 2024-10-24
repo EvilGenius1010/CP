@@ -1,12 +1,12 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
-#define vi vector<int>;
-#define ll long long
+using vi = vector<int>;
 
 void solve() {
-  int n;
-  cin >> n;
-  // Your code here
+  int a, b, c;
+  cin >> a >> b >> c;
+  int maxno = max(c, max(a, b));
 }
 
 int main() {

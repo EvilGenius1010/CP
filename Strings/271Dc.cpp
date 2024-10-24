@@ -1,20 +1,18 @@
+#include "../Tries/stdtriefns.h"
 #include <iostream>
 using namespace std;
 #define vi vector<int>;
 #define ll long long
 
 void solve() {
-  int n;
-  cin >> n;
-  // Your code here
+  string s;
+  cin >> s;
+  TrieNode *suffixtree = createSuffixTree(s);
 }
 
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
 
-  int t;
-  cin >> t;
-  while (t--)
-    solve();
+  solve();
 }
