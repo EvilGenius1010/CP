@@ -1,12 +1,27 @@
 #include <algorithm>
 #include <iostream>
 using namespace std;
-using vi = vector<int>;
+#define vi = vector<int>;
 
 void solve() {
-  int a, b, c;
-  cin >> a >> b >> c;
+  int a, b, c, n;
+  cin >> a >> b >> c >> n;
   int maxno = max(c, max(a, b));
+  int minno = min(c, min(a, b));
+  int midno = a + b + c - minno - maxno;
+
+  int mincoins = maxno - minno + maxno - midno;
+  if (mincoins > n) {
+    cout << "NO" << "\n";
+    return;
+  }
+  if ((n - mincoins) % 3 == 0) {
+    cout << "YES" << "\n";
+    return;
+  } else {
+    cout << "NO" << "\n";
+    return;
+  }
 }
 
 int main() {
