@@ -8,8 +8,26 @@ using namespace std;
 #define el "\n"
 
 void solve() {
-  int n;
-  cin >> n;
+  int n,m;
+  cin >> n>>m;
+
+  int arr[n];
+  for(int i=0;i<n;i++){
+  cin>>arr[i];
+  }
+
+  //use greedy
+  for(int i=0;i<n;i++){
+  if(arr[i]<=arr[i+1]){
+	//increasing order
+	continue;
+  }
+  else{
+  	while(arr[i]>arr[i+1]){
+		
+	}
+  }
+  }
 
 }
 
