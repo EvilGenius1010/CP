@@ -1,1 +1,9 @@
-50
+8
+i is0for  0
+i is1for  1
+i is2for  1
+i is3for  2
+i is4for  3
+i is5for  5
+i is6for  8
+
