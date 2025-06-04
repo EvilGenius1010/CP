@@ -2,15 +2,17 @@
 #include<vector>
 #include<map>
 #include<cmath>
-#include<all_headers.h>
 using namespace std;
 #define vi vector<int>;
 #define ll long long
 #define el "\n"
+#include<templates/stdstringfns.h>
 
 void solve() {
-  int n;
-  cin >> n;
+    string s;
+    cin>>s;
+
+    cout<<poly_hash_dev(s,31)<<"\n";
 
 }
 
@@ -18,8 +20,6 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
 
-  int t;
-  cin >> t;
-  while (t--)
+
     solve();
 }
