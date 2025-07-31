@@ -2,6 +2,7 @@
 #define stdstringfns
 #include <string>
 #include<math.h>
+#define ll long long 
 using namespace std;
 
 long long rolling_polynomial_hash_prod(string const &s) {
@@ -28,5 +29,32 @@ long long poly_hash_dev(string s,int p){
   }
   return sum;
 }
+
+/// @brief type for returning hashes for a pattern,text and prefixes of the text.
+struct TextPatternHashes{
+  ll textHash;
+  ll patternHash;
+  ll textPrefixHashes[];
+}; 
+
+TextPatternHashes returnHashes(string text,string pattern){
+  ll textHash= rolling_polynomial_hash_prod(text);
+  ll patternHash=rolling_polynomial_hash_prod(pattern);
+  ll prefixHashes[text.length()];
+  for(int i=0;i<text.length();i++){
+    rolling_polynomial_hash_prod(text.substr(0,i+1));
+  }
+  return TextPatternHashes{
+    textHash,
+    patternHash,
+    prefixHashes
+  };
+}
+
+
+
+
+
+
 
 #endif

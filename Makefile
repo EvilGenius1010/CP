@@ -7,6 +7,8 @@ MI_TEMPL := /Users/harshavardhankolhatkar04/Desktop/Coding_Docs/CP/MI_template.c
 SI_TEMPL := /Users/harshavardhankolhatkar04/Desktop/Coding_Docs/CP/SI_template.cpp
 ROOT := $(shell git rev-parse --show-toplevel)
 
+# SI means single input and MI means multiple input.
+
 # Set compiler and flags
 CXXFLAGS := -I$(ROOT)
 CXX := g++ $(CXXFLAGS)
@@ -42,7 +44,7 @@ exec:
 
 new:
 	@if [ -z "$(FILE)" ]; then \
-		echo "❌ Error: FNAME not provided"; exit 1; \
+		echo "❌ Error: FILE not provided"; exit 1; \
 	fi
 	@if [ -z "$(TYPE)" ]; then \
 		echo "❌ Error: TYPE (SI or MI) not provided"; exit 1; \

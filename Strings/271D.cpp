@@ -9,7 +9,18 @@ using namespace std;
 #define el "\n"
 
 void solve() {
-  cout<<poly_hash_dev("harsh",31)<<"\t whats this!"<<"\n";
+
+  string s,goodchar;
+  cin>>s;
+  //string of 0's and 1's 
+  cin>>goodchar;
+
+  //comparing in O(1) time
+  // bool isGood = goodchar[s[i]-'a'];
+
+  
+
+
 
 }
 
