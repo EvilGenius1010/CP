@@ -30,7 +30,8 @@ hexec:
 	@rm -f a.out
 
 # Rule 2: Run any C++ file from root
-# Usage: make quick FILE=maths/problem1.cpp
+# Usage: make quick FILE=maths/problem1
+# Omit the .cpp suffix
 exec:
 	@echo "⚙️  Compiling $(FILE)..."
 	@$(CXX) $(FILE).cpp -o a.out

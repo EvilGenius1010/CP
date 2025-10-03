@@ -1,31 +1,35 @@
-#include <cmath>
 #include <iostream>
-#include <map>
-#include <vector>
+#include<vector>
+#include<map>
+#include<cmath>
+// #include<all_headers.h>
 using namespace std;
 #define vi vector<int>;
 #define ll long long
 #define el "\n"
 
 void solve() {
-  int k, num;
-  cin >> num >> k;
-  while (k > 0) {
-    if (num % 10 == 0) {
-      num /= 10;
-      k--;
-    } else {
-      num -= 1;
-      k--;
+  int n,k;
+  cin >> n>>k;
+
+  for(int i=0;i<k;i++){
+    if(n%10==0){
+      n/=10;
+    }
+    else{
+      n-=1;
     }
   }
-  cout << num << "\n";
+
+  cout<<n<<"\n";
   return;
+
 }
 
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
 
-  solve();
+
+    solve();
 }
